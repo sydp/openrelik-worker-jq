@@ -86,7 +86,7 @@ def command(
             data_type=data_type,
         )
         command: list[str]  = base_command + [jq_filter, input_file.get("path")]
-        print(command)
+        
         # Run the command
         with open(output_file.path, "w") as fh:
             subprocess.Popen(command, stdout=fh)
